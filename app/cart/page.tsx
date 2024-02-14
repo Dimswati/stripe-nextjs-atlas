@@ -25,7 +25,7 @@ const Cart = (props: Props) => {
             ) : (
                 <section className="w-full flex flex-col gap-y-6">
                     {products.map(product => (
-                        <div className="flex md:flex-row flex-col gap-y-4 gap-x-4">
+                        <div key={product._id} className="flex md:flex-row flex-col gap-y-4 gap-x-4">
                             <Link href={`/${product.productSlug}`} className="aspect-square md:w-4/12 md:basis-4/12 w-full basis-full">
                                 <Image src={urlForImage(product.productImage)} alt="product image" className="w-full object-cover object-center rounded-lg aspect-square" width={500} height={500} />
                             </Link>
